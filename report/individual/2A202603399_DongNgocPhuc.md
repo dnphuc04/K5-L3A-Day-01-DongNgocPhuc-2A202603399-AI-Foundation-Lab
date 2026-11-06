@@ -86,14 +86,14 @@ Với 300 triệu SMS trong tháng 30 ngày, chi phí theo số đo trong JSON �
 
 ## 7. AI log và điều đã học
 
-| Phần | Em hỏi AI gì | AI trả lời/viết gì | Em sửa hoặc kiểm chứng gì |
-| --- | --- | --- | --- |
-| Phần 0 | Cách đọc notebook, chia dữ liệu, data leakage | Giải thích khái niệm và các cell | Đối chiếu 5.169 tin sau bỏ trùng, gồm 4.516 ham và 653 spam |
-| Phần 1 | Ban đầu hỏi khái niệm; sau khi tự làm và được mentor đồng ý, hỏi code đối chiếu | Giải thích BoW, sigmoid, gradient, metrics và cung cấp code NumPy tham khảo | Em chạy kiểm tra, đối chiếu loss, precision, recall và F1; không dùng sklearn |
-| Phần 2 | Ban đầu hỏi MLP, backpropagation, overfitting; sau khi tự làm và được mentor đồng ý, hỏi code đối chiếu | Giải thích và cung cấp code PyTorch tham khảo | Em phân tích biểu đồ train/val loss và kết quả test |
-| Phần 3 | Ban đầu hỏi embedding, cosine, kNN; sau khi tự làm và được mentor đồng ý, hỏi code đối chiếu | Giải thích và cung cấp code NumPy tham khảo | Em chạy kiểm tra, đối chiếu kết quả 5/6 và biểu đồ PCA |
-| Phần 4 | Cấu hình API, hoàn thành TODO, lỗi 429 và output không hợp lệ | Viết code gọi API, prompt, parse, batch; hướng dẫn giãn cách và retry | Em chạy zero-shot/few-shot, phát hiện invalid=40; nguyên nhân chưa được xác minh |
-| Phần 5 | Phân tích Pareto, stress test, tính tay, phản ánh và báo cáo | Hỗ trợ diễn giải số liệu, cung cấp phép tính và đề xuất 5 case bonus | Em gửi output để đối chiếu; case bonus do AI đề xuất, không phải hoàn toàn tự nghĩ |
-| Thử thách cá nhân | Sau khi tự làm và được mentor đồng ý, nhờ đối chiếu kNN với k=1, 5, 25 | Cung cấp code tham khảo và giải thích ảnh hưởng của k | Em chạy và đối chiếu F1 lần lượt 0,9217; 0,9273; 0,9058 |
+| Phần | Bạn hỏi AI gì (prompt) | AI trả lời/viết gì | Bạn đã sửa / kiểm chứng gì |
+|---|---|---|---|
+| Phần 0 | Em hỏi cách đọc notebook, chia dữ liệu và hiểu data leakage. | AI giải thích các cell và nguy cơ tin trùng giữa train/test. | Em đối chiếu số liệu sau bỏ trùng: 5.169 tin, gồm 4.516 ham và 653 spam. |
+| Phần 1 | Ban đầu em hỏi khái niệm BoW, sigmoid, gradient descent và metrics. | AI giải thích khái niệm và cung cấp code NumPy tham khảo. | Em đối chiếu với bài tự làm, chạy thí nghiệm và kiểm tra loss, precision, recall, F1. |
+| Phần 2 | Ban đầu em hỏi về MLP, backpropagation và overfitting. | AI giải thích và cung cấp code PyTorch để đối chiếu. | Em kiểm tra kết quả chạy và phân tích biểu đồ train/val loss. |
+| Phần 3 | Ban đầu em hỏi về embedding, cosine similarity và kNN. | AI giải thích và cung cấp code NumPy để đối chiếu. | Em chạy kiểm tra, so sánh BoW với embedding và phân tích các tin dự đoán sai. |
+| Phần 4 | Em hỏi cách cấu hình API, hoàn thành TODO và xử lý lỗi 429. | AI viết các hàm gọi API, tạo prompt, đọc nhãn, phân loại batch; đề xuất giãn cách và retry. | Em chạy zero-shot/few-shot và phát hiện invalid=40. Em chưa xác minh được nguyên nhân nên chưa coi F1=0 là chất lượng thực của LLM. |
+| Phần 5 | Em nhờ phân tích Pareto, stress test, tính tay và phản ánh. | AI soạn câu trả lời theo output, cung cấp phép tính và 5 case bonus. | Em cung cấp bảng kết quả và lỗi để đối chiếu; các case bonus do AI đề xuất, không phải em tự nghĩ hoàn toàn. |
+| Phần thử thách cá nhân | Em nhờ AI hỗ trợ đối chiếu cách so sánh kNN với k=1, 5, 25. | AI cung cấp code tham khảo và giải thích ảnh hưởng của k. | Em chạy và đối chiếu F1 lần lượt 0,9217; 0,9273; 0,9058, rồi phân tích ưu nhược điểm của từng k. |
 
 Em hiểu rằng điểm test cao chưa bảo đảm mô hình xử lý tốt các trường hợp khó và mô hình lớn hơn không luôn tốt hơn. Em phân biệt được kiểm tra giả lập đạt với việc API thật trả nhãn hợp lệ. Khi chọn phương án, em cần cân nhắc đồng thời chất lượng, độ trễ, thông lượng, chi phí và độ bền trước dữ liệu mới.
